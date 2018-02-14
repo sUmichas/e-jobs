@@ -1,0 +1,60 @@
+    <div class="container" style="background-color: #F3F6FA">
+
+      <div class="row">
+
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-12" *ngIf="post" id="post-content">
+          <h1 style="font-family:Comic Sans, cursive"> Job Details</h1>
+
+          <div class="card mt-4" *ngIf="!(isOwner)">
+            <div class="card-body">
+              <h2 class="card-title">{{ post.title }}</h2>
+              <p class="pull-right">
+                <button (click)="isOwner = true"><i class="fa fa-edit"></i>Edit</button>
+                <br>
+                <b>{{post.user_name}}</b></p>
+              <h4>Address: {{post.place}}</h4><small>Date posted: {{post.date_posted.slice(0,19).split('T')}}</small>
+              <hr>
+              <p class="card-text">{{post.description}}</p>
+            </div>
+
+          </div>
+          <!-- /.card -->
+          <div class="col-lg-12" *ngIf="post" id="post-content">
+          <h1 style="font-family:Comic Sans, cursive"> Job Details</h1>
+
+          <div class="card mt-4" *ngIf="isOwner">
+            <div class="card-body">
+              <h2 class="card-title"><input [(ngModel)]="post.title" placeholder="title"></h2>
+              <p class="pull-right">
+                <button><i class="fa fa-edit"></i></button>
+                <br>
+                <b>{{post.user_name}}</b></p>
+              <h4>Address:<input [(ngModel)]="post.place" placeholder="place"></h4><small>Date posted: {{post.date_posted.slice(0,19).split('T')}}</small>
+              <hr>
+              <p class="card-text"><input [(ngModel)]="post.description" placeholder="description"></p>
+            </div>
+            <ng-template #template>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left"><strong>Error!</strong></h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                You have to login as {{post.user_name}} to edit this post.
+              </div>
+            </ng-template>
+
+            <button (click)="save(template)" (click)="isOwner = false" style="width:10%">Save</button>
+          </div>
+
+          <app-comment></app-comment>
+          <!-- /.card -->
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+
+    </div>

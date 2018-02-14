@@ -1,0 +1,21 @@
+footer{
+  color: white;
+  bottom:0;
+  width: 100%;
+  padding-bottom: 4%;
+  background-color: black;
+  padding-top: 3%
+}
+
+footer a{
+  color:white;
+}
+
+.page-wrap{
+	position: relative;
+}
+
+#yo{
+  background-color: black;
+  color:white;
+}

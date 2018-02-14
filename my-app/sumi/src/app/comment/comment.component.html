@@ -1,0 +1,31 @@
+<div class="card card-outline-secondary my-4">
+    <div class="card-header">
+        Comments
+    </div>
+    <div class="card-body" *ngFor="let comment of comments">
+    	<h5>{{comment.title}}</h5><small class="text-muted">Date posted {{comment.date_posted.slice(0,19).split('T')}}</small>
+        <p>{{comment.description}}</p>
+        <small class="text-muted">Posted by {{comment.user_name}}</small>
+        <br>
+        <hr>
+	</div>
+<!--     <div class="alert alert-info" style="margin:100px" *ngIf="!(auth.isLoggedIn)">
+      <strong>Sign Up/Sign In</strong> if you want to comment this post.
+    </div> -->
+
+    <div class="container">
+      <form [formGroup]="commentForm" (ngSubmit)="onSubmit(commentForm)" novalidate>
+
+        <label for="fname">First Name</label>
+        <input type="text" id="title" name="title" placeholder="Your title.." formControlName="title" required>
+
+        <label for="subject">Subject</label>
+        <textarea id="description" name="description" placeholder="Write something.." style="height:100px"
+        formControlName="description" required></textarea>
+
+        <button type="submit" class="btn btn-success" [disabled]="commentForm.invalid">Leave a comment</button>
+
+      </form>
+    </div>
+
+</div>

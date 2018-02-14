@@ -1,0 +1,83 @@
+<nav class="navbar">
+	 <a routerLink='/main'><img src="assets/logo.png" alt="logo" style="display: block;margin-left: 8%;color:white;">
+   </a>
+
+  <ul class="nav justify-content-center" style="margin-right: 61%">
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/post">Posts</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/create-post">Create new post</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/profiles">Users</a>
+    </li>
+  </ul>
+
+      <span [ngSwitch]="auth.isLoggedIn" style="width:100%;margin-left: 85%;">
+        <span *ngSwitchCase="false">
+          <div class="btn-group" dropdown >
+  		    <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle" style="background-color: black;border-color: black" >
+  		      Sign in/Sign up <span class="caret"></span>
+  		    </button>
+  		    <ul *dropdownMenu class="dropdown-menu" role="menu" >
+ 
+            <li role="menuitem">
+            <a class="dropdown-item" (click)="open(content)">Log in</a>
+            
+            <ng-template #content let-c="close" let-d="dismiss">
+              <div class="modal-header">
+                <h2 class="modal-title" style="margin-left: 38%;">Log in</h2>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="d('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="card card-container" style="padding: 5%">
+                      <span id="reauth-email" class="reauth-email"></span>
+                      <div class="form-group">
+                        Username:
+                        <input #username
+                        type="text" id="username" class="form-control" placeholder="Username" name="username"  required autofocus>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        Password:
+                        <input #password
+                        type="password" id="inputPassword" class="form-control" placeholder="Password" name="password"
+                       required>      
+                      </div>
+
+                      <button (click)="login(username.value,password.value)" (click)="c('Close click')" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                  </div><!-- /card-container -->
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+              </div>
+            </ng-template>
+            </li>
+  		      <li role="menuitem"><a class="dropdown-item" routerLink="/register">Register</a>
+  		    </li>
+        </ul>
+      </div>
+          </span>
+          <span *ngSwitchCase="true">
+            <div class="btn-group" dropdown style="width:100%;" >
+            <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle" style="background-color: black;border-color: black" >
+              {{username}} <span class="caret"></span>
+            </button>
+            <ul *dropdownMenu class="dropdown-menu" role="menu" >
+              <li role="menuitem"><a class="dropdown-item" (click)="logout()">Log out</a>
+              </li>
+              <li role="menuitem"><a class="dropdown-item" routerLink="/yourposts">Your Posts</a>
+              </li>
+            </ul>
+            </div>
+          </span>
+        </span>
+
+
+
+</nav>
