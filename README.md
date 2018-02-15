@@ -2,6 +2,12 @@
 
 E-jobs is a c2c platform that anyone can use. Once you create an account you can create a post about a job that you need, such as to fix your TV. Another user that knows how to help you has a problem that is your expertise. For example you are a web developer and he has issues with deploying his project in nginx. So that means that you can "exchange" your services and "pay" with your job. In case, that someone's issue is more complicated, then you can agree on the cost. 
 
+### Requirements:
+- python 3.x
+-angular cli
+-node
+
+
 ### Steps for installation and run locally e-jobs
 
 If you want to run e-jobs locally follow steps below:
@@ -35,7 +41,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 5. Go to /your-path/my-app/sumi and install node_modules.:
-```markdown
+`
 cd /your-path/my-app/sumi
 npm install
 npm start
@@ -44,21 +50,19 @@ npm start
 cd ../sumi
 npm install
 npm start
-```
+`
 6. Visit localhost:4200/
 
 7. You must see this page:
 
 ![Image of e-jobs](https://photos.google.com/share/AF1QipPdSsbAUKLmv6O3J8f5c7WpuN-amQZB4gGV1YxoyA60h98flmnnR5cYVmNADDBLNw/photo/AF1QipNB-xIxYqFR0FPoHEcwGCUcKsnPU2u0ZfqNj-yg?key=UGV5RFFIQkpFVWlvcEpRQkFyNlVOX2R0ZDl5LWZR)
+
+
 # Header 1
 ## Header 2
 ### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
 **Bold** and _Italic_ and `Code` text
 
