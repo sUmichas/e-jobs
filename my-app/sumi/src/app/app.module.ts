@@ -22,7 +22,6 @@ import { CommentService } from './comment.service';
 
 
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -47,7 +46,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
