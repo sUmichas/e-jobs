@@ -40,7 +40,8 @@ SECRET_KEY = 'yourdjangosecretkey'
 ```
 3. Download python packages with pip:
 ```markdown
-pip install django pymysql djangorestframework djangorestframework-jwt 
+pip install django pymysql djangorestframework djangorestframework-jwt django-cors-headers
+# if you don't need corsheader delete 'corsheaders' from INSTALLED_APPS in my-app/server/server/settings.py and my-app/server/server/production_settings.py and delete the line CORS_ORIGIN_ALLOW_ALL = True
 ```
 4. Go to /your-path/my-app/server and migrate your changes. Then start your app:
 ```markdown
