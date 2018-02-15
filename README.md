@@ -10,6 +10,15 @@ E-jobs is a c2c platform that anyone can use. Once you create an account you can
 
 ### Steps for installation and run locally e-jobs
 
+Create your mysql database like this:
+```markdown
+CREATE DATABASE ejobs CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+CREATE USER 'ejobs_user'@'localhost' IDENTIFIED BY 'strongPasswd12$';
+
+GRANT ALL PRIVILEGES ON ejobs.* TO 'ejobs_user'@'localhost';
+```
+
 If you want to run e-jobs locally follow steps below:
 
 1. Clone the repo:
@@ -41,7 +50,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 5. Go to /your-path/my-app/sumi and install node_modules.:
-`
+```markodown
 cd /your-path/my-app/sumi
 npm install
 npm start
@@ -50,31 +59,30 @@ npm start
 cd ../sumi
 npm install
 npm start
-`
+````
 6. Visit localhost:4200/
 
 7. You must see this page:
 
-![Image of e-jobs](https://photos.google.com/share/AF1QipPdSsbAUKLmv6O3J8f5c7WpuN-amQZB4gGV1YxoyA60h98flmnnR5cYVmNADDBLNw/photo/AF1QipNB-xIxYqFR0FPoHEcwGCUcKsnPU2u0ZfqNj-yg?key=UGV5RFFIQkpFVWlvcEpRQkFyNlVOX2R0ZDl5LWZR)
+[Image of e-jobs](https://photos.google.com/share/AF1QipPdSsbAUKLmv6O3J8f5c7WpuN-amQZB4gGV1YxoyA60h98flmnnR5cYVmNADDBLNw/photo/AF1QipNB-xIxYqFR0FPoHEcwGCUcKsnPU2u0ZfqNj-yg?key=UGV5RFFIQkpFVWlvcEpRQkFyNlVOX2R0ZDl5LWZR)
 
 
-# Header 1
-## Header 2
-### Header 3
+### Pages
+
+- In register page you sign up. If your input is valid, a sussess pop-up apperas.If not, an error pop-up appears.
+  Note that you need to fill all fields to enable register button.
+
+- In Posts page you see all posts that have been created
+
+-In Create-post you can create a new post.
+ Note that you have to sign in to create a new post
+
+-In Users you can see all users that have created an account. If you click on someone a profile page appears with all his information
+
+-In post/[post:id] you can see the details of a post. You can also edit it, if you are the one that created it.
+ You can also see the comments that other users have posted. You can also create your own comment. 
+
+-Once you sing in, there is a link Your posts under your "username-list" in navbar.
+ In this page you can see all your posts.
 
 
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sUmichas/e-jobs/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
