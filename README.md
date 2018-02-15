@@ -74,15 +74,15 @@ npm start
 
 - In Posts page you see all posts that have been created
 
--In Create-post you can create a new post.
- Note that you have to sign in to create a new post
+- In Create-post you can create a new post.
+  Note that you have to sign in to create a new post
 
--In Users you can see all users that have created an account. If you click on someone a profile page appears with all his information
+- In Users you can see all users that have created an account. If you click on someone a profile page appears with all his information
 
--In post/[post:id] you can see the details of a post. You can also edit it, if you are the one that created it.
- You can also see the comments that other users have posted. You can also create your own comment. 
+- In post/[post:id] you can see the details of a post. You can also edit it, if you are the one that created it.
+  You can also see the comments that other users have posted. You can also create your own comment. 
 
--Once you sing in, there is a link Your posts under your "username-list" in navbar.
- In this page you can see all your posts.
+- Once you sing in, there is a link Your posts under your "username-list" in navbar.
+  In this page you can see all your posts.
 
 
