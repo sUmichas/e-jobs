@@ -4,8 +4,8 @@ E-jobs is a c2c platform that anyone can use. Once you create an account you can
 
 ### Requirements:
 - python 3.x
--angular cli
--node
+- angular cli
+- node
 
 
 ### Steps for installation and run locally e-jobs
