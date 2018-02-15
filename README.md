@@ -1,12 +1,11 @@
-## Welcome to GitHub Pages
+## Welcome to e-jobs
 
-You can use the [editor on GitHub](https://github.com/sUmichas/e-jobs/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+E-jobs is a c2c platform that anyone can use. Once you create an account you can create a post about a job that you need, such as to fix your TV. Another user that knows how to help you has a problem that is your expertise. For example you are a web developer and he has issues with deploying his project in nginx. So that means that you can "exchange" your services and "pay" with your job. In case, that someone's issue is more complicated, then you can agree on the cost. 
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+If you want to run e-jobs locally follow steps below:
+
 
 ```markdown
 Syntax highlighted code block
