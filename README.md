@@ -56,7 +56,7 @@ cd /your-path/my-app/sumi
 npm install
 npm start
 
-#if you follow this guide and you successfully completed step 4
+# if you follow this guide and you successfully completed step 4
 cd ../sumi
 npm install
 npm start
