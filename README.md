@@ -70,7 +70,7 @@ npm start
 
 ### Pages
 
-- In register page you sign up. If your input is valid, a sussess pop-up apperas.If not, an error pop-up appears.
+- In register page you sign up. If your input is valid, a sussess pop-up appears.If not, an error pop-up appears.
   Note that you need to fill all fields to enable register button.
 
 - In Posts page you see all posts that have been created
