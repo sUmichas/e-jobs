@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+		<div class="well">
+        <h1 class="text-center">All Users</h1>
+        <div class="list-group">
+          <div *ngFor="let user of users" class="list-group-item active" style="margin-bottom: 20px;background-color: white;color:black" >
+                <div >
+                	<a routerLink="/profile/{{user.id}}">{{user.username}}</a>
+
+                    	<h4 class="list-group-item-heading"> Job Title:  <small>{{user.profile.job_title}}</small></h4>
+                 
+                    <p class="list-group-item-text"> <b>Job Description:</b>
+                    	{{user.profile.job_description}}
+                    </p>
+                </div>
+                <div class="col-md-3 text-center">
+ 
+                </div>
+          </div>         
+        </div>
+        </div>
+	</div>
+</div>

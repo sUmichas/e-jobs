@@ -1,0 +1,29 @@
+<div class="container" style="background-color: #F3F6FA">
+
+      <!-- Page Heading -->
+      <h1 class="my-4" style="font-family:Comic Sans, cursive">Job Posts
+      </h1>
+
+      <div class="row" >
+        <div *ngFor="let post of posts" class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+          <div class="card h-100" style="
+    background-color: #DFE7F2;">
+            <div class="card-body">
+              <p class="pull-right"><b>{{post.place}}</b></p>
+              <br>
+              <h4 class="card-title">
+                <a routerLink="/posts/{{post.id}}">{{post.title}}</a>
+              </h4>
+              <ul>
+              	<li style="font-size:15px;"><b>Name:</b> {{post.user_name.slice(1,-1)}}</li>
+              </ul>
+              <p class="card-text">{{post.description}}</p>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->

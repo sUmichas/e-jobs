@@ -1,0 +1,23 @@
+<div class="col-lg-12" >
+    <div class="card card-outline-secondary my-4" *ngIf="auth.isLoggedIn">
+
+        <div class="card-header">
+            Your posts
+        </div>
+        <div class="card-body" *ngFor="let post of posts">
+        	<a routerLink="/posts/{{post.id}}"><h5>{{post.title}}</h5></a><small class="text-muted">Date posted {{post.date_posted.slice(0,19).split('T')}}</small>
+            <p>{{post.description}}</p>
+            <small class="text-muted">Posted by {{post.user_name}}</small>
+
+            <br>
+            <hr>
+    	</div>
+        
+    </div>
+</div>
+
+<div style="padding-bottom: 29.3%" *ngIf="!(auth.isLoggedIn)">
+    <div class="alert alert-danger" style="margin:100px">
+      <strong>Error!</strong> You have to sign in!
+    </div>
+</div>

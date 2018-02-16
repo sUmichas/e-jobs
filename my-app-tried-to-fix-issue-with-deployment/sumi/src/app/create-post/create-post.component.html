@@ -1,0 +1,108 @@
+<div id='"main-container' class="wrap-container container clearfix offcanvas offcanvas-right" style="display: table;table-layout: fixed;margin-top: 25px;margin-bottom: 15%;color:#515358;" *ngIf="auth.isLoggedIn">
+	<div class="main-content controller-job action-new" style="width: 70%;display: table-cell;background-color: white;padding: 1%">
+	    <div class="bg-fill widget-PostJob clearfix">
+			<header class="clearfix">
+	            <h1>
+	            Get your Job Done!                
+	            <aside class="below">
+	            Post a Job for Free - Start receiving proposals within minutes</aside>
+	            </h1>
+	        </header>
+	<hr>
+
+	<form class="form-horizontal" name="form" [formGroup]="postForm" (ngSubmit)="onSubmit(postForm)" novalidate>
+
+		<div class="form-group prepend-top">
+		        <label class="pull-left required" for="postTitle">Title</label>
+		        	<div style="display: none !important;" ></div>
+		        	<input placeholder="e.g. Athens,Patissiwn 104" class="form-control form-control clear"  type="text" maxlength="85" formControlName="title" required>
+		</div>
+
+		    <div class="mergeinput-container row"></div>
+
+		<div class="form-group prepend-top">
+		        <label class="pull-left required" for="postDescription">Description</label>
+		        <textarea class="form-control autoresized-textarea clear" rows="7" placeholder="Provide a more detailed description to help you get better proposals" formControlName="description"
+		        required></textarea>    </div>
+
+		<div class="form-group prepend-top">
+		        <label class="pull-left required" for="postPlace">Place</label>
+		        	<div style="display: none !important;" ></div><input placeholder="e.g. Athens,Patissiwn 104" class="form-control form-control clear"  type="text" maxlength="85" 
+		        	formControlName="place" required>
+		</div>
+
+
+		
+
+		<div class="form-group prepend-top clearfix row">
+
+		    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 gutter-bottom">
+		        <label class="pull-left required" >Urgency level</label>
+		        <select class="currency form-control" formControlName="urgency_level" required>
+					<option value="VL">Very Low</option>
+					<option value="L">Low</option>
+					<option value="N" selected="selected">Normal</option>
+					<option value="H">High</option>
+					<option value="VH">Very High</option>
+				</select>    
+			</div>
+
+		</div>
+
+		<ng-template #template_success>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left alert alert-success"><strong>Success!</strong></h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                You created a new post successfully.
+              </div>
+        </ng-template>
+        <ng-template #template_error>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left alert alert-danger"><strong>Error!</strong></h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Something went wrong. Check your fields again.
+              </div>
+        </ng-template>
+
+
+		
+
+		<div class="clearfix prepend-top append-bottom" style="padding-top: 15px;">
+		    <button type="submit" class="btn btn-success" [disabled]="postForm.invalid">Post Job</button>
+		</div>
+</form>
+		</div>
+
+
+		 </div>
+
+		    <aside class="right-column sidebar-job-new offcanvas-sidebar" style="width: 29%;display: table-cell;background-color: #f8f9fc;padding: 1%">
+		        
+				<h3 class="sidebar-header">Useful Tips</h3>
+				<div class="lifted-corners with-handles">
+				    <div class="handles"></div>
+				    <div>
+				        <ul class="numbered-tips">
+				                            <li class="clearfix">Describe your Job in as much detail as you can comfortably reveal - it will increase the quality of proposals you receive and shorten the selection process.</li>
+				                            <li class="clearfix">Upload as much relevant information  as possible to get a realistic quote.</li>
+				                            <li class="clearfix">Match the experience level to your requirements – remember, you’re looking for the best you can afford, not the cheapest you can get.</li>
+				                    </ul>
+				    </div>
+				</div>
+		    </aside>
+	</div>
+
+
+<div style="padding-bottom: 29.3%" *ngIf="!(auth.isLoggedIn)">
+	<div class="alert alert-danger" style="margin:100px">
+	  <strong>Error!</strong> You have to sign in!
+	</div>
+</div>

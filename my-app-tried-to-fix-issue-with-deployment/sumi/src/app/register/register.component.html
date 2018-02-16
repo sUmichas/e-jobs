@@ -1,0 +1,230 @@
+<div class="container" style="padding-top: 10%;padding-bottom: 10%">
+    <form class="form-horizontal" name="form" [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)" novalidate>
+        <div class="row" style="padding-bottom: 20px">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h2 style="text-align: center;">Register New User</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p style="font-size:20px"><i>Personal Info</i></p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="username">Username</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                        <input type="text" name="username" class="form-control" id="username"
+                               placeholder="John Doe" formControlName="username" 
+                               required>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                        <input type="text" name="first_name" class="form-control" id="first_name"
+                               placeholder="John Doe" formControlName="first_name" 
+                               required>
+                    </div>
+                </div>
+            </div>
+  
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="last_name">Last Name</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                        <input type="text" name="last_name" class="form-control" id="last_name"
+                               placeholder="John Doe" required formControlName="last_name">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="email">E-Mail Address</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                        <input type="text" name="email" class="form-control" id="email"
+                               placeholder="you@example.com" required formControlName="email">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="password">Password</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-danger">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                        <input type="password" name="password" class="form-control" id="password"
+                               placeholder="Password" required formControlName="password">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div formGroupName="profile">
+  
+	        <div class="row">
+	            <div class="col-md-3 field-label-responsive">
+	                <label for="gender">Gender</label>
+	            </div>
+	            <div class="col-md-6">
+	                <div class="form-group">
+                        <select class="currency form-control" id="gender" formControlName="gender">
+                            <option value="M">Male</option>
+                            <option value="F" selected="selected">Female</option>
+
+                        </select> 
+	                </div>
+	            </div>
+
+	        </div>
+	    
+            <div class="row">
+                <div class="col-md-3 field-label-responsive">
+                    <label for="age">Age</label>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem"></div>
+                            <input type="text" name="age" class="form-control" id="age"
+                                   placeholder="John Doe" required formControlName="age">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <br>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <p style="font-size:20px"><i>Location Info</i></p>
+                    <hr>
+                </div>
+            </div>
+
+           <div class="row">
+                
+                <div class="col-md-3 field-label-responsive">
+                    <label for="address">Type your address: </label>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" formControlName="address">
+                        </div>
+                    </div>
+                </div>
+      
+            </div>
+
+   
+
+
+
+           <br>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <p style="font-size:20px"><i>Job Info</i></p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 field-label-responsive">
+                    <label for="job_title">Job Title</label>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                            <input type="text" name="job_title" class="form-control" id="job_title"
+                                   placeholder="John Doe" required formControlName="job_title">
+                        </div>
+                    </div>
+                </div>
+     
+            </div>
+            <div class="row">
+                <div class="col-md-3 field-label-responsive">
+                    <label for="job_description">Job Description</label>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <textarea name="job_description" class="form-control" id="job_description"
+                                   placeholder="Describe your skills" rows="5"
+                                   formControlName="job_description"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <ng-template #template_success>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left alert alert-success"><strong>Success!</strong></h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                You can sign in and start posting your "job needs".
+              </div>
+        </ng-template>
+        <ng-template #template_error>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left alert alert-danger"><strong>Error!</strong></h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Something went wrong. Check your fields again.
+              </div>
+        </ng-template>
+        <script>window.__theme = 'bs4';</script>
+        <br>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button [disabled]="registerForm.invalid" type="submit" class="btn btn-success"><i class="fa fa-user-plus"></i> Register</button>
+            </div>
+        </div>
+    </form>
+</div> 
